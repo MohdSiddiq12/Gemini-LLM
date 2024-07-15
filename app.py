@@ -20,6 +20,10 @@ st.set_page_config(page_title="Q&A Demo")
 st.header("Gemini LLM Application")
 
 input = st.text_input("input: ", key = "input")
+submit = st.button("Ask the Question")
 
-
-    
+##when submit is clicked
+if submit:
+    response=get_gemini_resonse(input)
+    st.subheader("The Response is")
+    st.write(response)
